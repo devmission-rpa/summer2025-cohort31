@@ -1,0 +1,22 @@
+{
+  "name": "webpage-layout-project",
+  "version": "1.0.0",
+  "description": "A simple webpage layout project with HTML, CSS, and JavaScript.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "web",
+    "layout",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
