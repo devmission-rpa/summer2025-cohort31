@@ -53,9 +53,9 @@ async function fetchAlleys() {
 //           </div>
     
 //         `;
-//       }
+      }
 
-//       getResultElement.innerHTML = newHtml;
-//     });
-// }
+      getResultElement.innerHTML = newHtml;
+    });
+      }
 
