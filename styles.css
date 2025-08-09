@@ -1,0 +1,14 @@
+
+/* Optional: Center the directory container and add spacing */
+.directory-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin-left: 170px;
+    }
+
+/* Optional: Add some spacing between cards */
+.card {
+    margin-bottom: 20px;
+}
