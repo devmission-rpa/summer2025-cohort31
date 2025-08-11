@@ -34,7 +34,8 @@ async function fetchAlleys() {
         let linkedIn = record["LinkedIn"];
         let biography = record["Biography"];
         let personality = record["Personality"];
-        let projectLink = record["Project Link"];
+        let aboutMe = record["About Me"];
+        let webApp = record["Web App"];
         let restaurant = record["Restaurant"];
         let order = record["Order"];
 
@@ -44,9 +45,13 @@ async function fetchAlleys() {
             <div class="card">
               <img src="${picture}" class="card-img-top" alt="${name}'s Photo">
               <div class="card-body">
-                <h5 class="card-title d-flex align-items-center gap-2">${name}  ${linkedIn ? `<a href="${linkedIn}" target="_blank" class="text-decoration-none">
+                <h5 class="card-title d-flex align-items-center justify-content-center gap-2">${name}  ${linkedIn ? `<a href="${linkedIn}" target="_blank" class="text-decoration-none">
             <i class="bi bi-linkedin"></i>
           </a>` : ''}</h5>
+          <div class="d-flex justify-content-center gap-3 mb-2">
+  ${aboutMe ? `<a href="${aboutMe}" target="_blank" class="text-decoration-none">About Me</a>` : ''}
+  ${webApp ? `<a href="${webApp}" target="_blank"  class="text-decoration-none">Web App</a>` : ''}
+</div>
                 <p class="card-text">${biography}</p>
                 <p class="card-text">MBTI Personality: ${personality}</p>
                 <p class="card-text">Restaurant: ${restaurant}</p>
