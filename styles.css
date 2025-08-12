@@ -1,0 +1,23 @@
+
+/*Centering heading but will probably change later w/ navbar*/
+.header {
+    text-align: center;
+}
+/* Optional: Center the directory container and add spacing */
+.directory-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin-left: 170px;
+    }
+
+.studentPageBG {
+  background-image: url("student_page_BG.png");  
+  width: 1440px;
+  display: block;              
+}
+/* Optional: Add some spacing between cards */
+.card {
+    margin-bottom: 20px;
+}
