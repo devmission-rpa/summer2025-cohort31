@@ -1,4 +1,8 @@
 
+/*Centering heading but will probably change later w/ navbar*/
+.header {
+    text-align: center;
+}
 /* Optional: Center the directory container and add spacing */
 .directory-container {
     display: flex;
