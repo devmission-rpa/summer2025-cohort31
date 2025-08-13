@@ -1,7 +1,9 @@
-
 /*Centering heading but will probably change later w/ navbar*/
-.header {
+.directory-header{
     text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    /* padding:auto; */
 }
 /* Optional: Center the directory container and add spacing */
 .directory-container {
@@ -9,7 +11,9 @@
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-    margin-left: 170px;
+    margin-left: 100px;
+    margin-right: 100px;
+    /* margin: auto; */
     }
 
 .studentPageBG {
@@ -17,7 +21,8 @@
   width: auto; /*1440
   /* max-width: fit-content;
   max-width: fit-content; */
-  display: block;              
+  display: block;
+  margin-top: auto;              
 }
 .homePageBG {
   background-image: url('SF_CIty.png');
@@ -31,7 +36,7 @@
   flex-direction: column;
  /* justify-content: center; */
   align-items: center;
-  margin-bottom: 0px;
+  /* margin-bottom: 0px; */
 
 } 
 /* Optional: Add some spacing between cards */
