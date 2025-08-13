@@ -14,9 +14,26 @@
 
 .studentPageBG {
   background-image: url("student_page_BG.png");  
-  width: 1440px;
+  width: auto; /*1440
+  /* max-width: fit-content;
+  max-width: fit-content; */
   display: block;              
 }
+.homePageBG {
+  background-image: url('SF_CIty.png');
+  background-size: cover;         /* Ensures the image covers the container */
+  background-repeat: no-repeat;   /* Prevents repeating */
+  /*background-position: center;    /*Centers the image */
+  width: 100vw;
+  height: 150vh;
+  min-height: 400px;              /* Optional: minimum height for small screens */
+  display: flex;
+  flex-direction: column;
+ /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 0px;
+
+} 
 /* Optional: Add some spacing between cards */
 .card {
     margin-bottom: 20px;
