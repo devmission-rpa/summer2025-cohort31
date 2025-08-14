@@ -9,21 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
   // Splash Page Enter Button
-  enterBtn.addEventListener("click", () => {
-    splash.style.transition = "opacity 0.8s";
-    splash.style.opacity = 0;
-    setTimeout(() => {
-      splash.style.display = "none";
-      navbar.classList.remove("d-none");
-      directory.classList.remove("d-none");
-      fetchTrainees();
-    }, 800);
-  });
+ enterBtn.addEventListener("click", () => {
+  splash.style.transition = "opacity 0.8s";
+  splash.style.opacity = 0;
+  setTimeout(() => {
+    splash.style.display = "none"; // Hide the splash page completely
+    navbar.classList.remove("d-none");
+    directory.classList.remove("d-none");
+    fetchTrainees();
+  }, 800);
+});
 
   // Theme Toggle Button
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("light-mode");
     themeToggle.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+   console.log(body.className); 
   });
 });
 
@@ -74,3 +75,4 @@ async function fetchTrainees() {
     getResultElement.innerHTML = "<p class='text-center text-danger'>Failed to load data. Check your API key and table name.</p>";
   }
 }
+

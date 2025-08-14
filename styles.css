@@ -12,6 +12,8 @@
   align-items: center;
   overflow: hidden;
   z-index: 1000;
+  /* opacity: 0;
+  pointer-events: none; */
 }
 
 .splash-overlay {
@@ -100,3 +102,21 @@ body.light-mode .directory-header { color: #1e1e2f; }
 /* Backgrounds for light mode */
 body.light-mode .studentPageBG { background-image: url('student_page_BG.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom; min-height: 600px; width: 100%; display: block; }
 body.light-mode .homePageBG { background-image: url('SF_CIty.png'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: 100vh; width: 100vw; display: flex; flex-direction: column; }
+
+/*Background for dark mode*/
+body.dark-mode .homePageBG {
+  background-image: url('SF_CIty_Night.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 400px; /* adjust as needed */
+  width: 100vw;
+  z-index: 1000;
+}
+
+/* 
+for figureing out if the image is shown
+.homePageBG {
+  border: 5px solid red;
+}
+ */
