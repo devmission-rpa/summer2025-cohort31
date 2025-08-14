@@ -154,3 +154,7 @@ body.light-mode .directory-header {
   display: flex;
   flex-direction: column;
 }
+.half-moons span{
+  position: absolute;
+
+}
