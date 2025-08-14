@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("light-mode");
     themeToggle.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+    
   });
 });
 // Airtable API

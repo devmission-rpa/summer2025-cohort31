@@ -314,3 +314,66 @@ body.light-mode .directory-header {
 .row-cols-md-3 > .col {
   display: flex;
 }
+
+/*********** Pastel Theme ***************/
+/*Centering heading but will probably change later w/ navbar*/
+
+/*delete later*/
+/* .directory-header{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+} */
+
+/** delete later */
+/* .directory-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    } */
+
+body.light-mode .studentPageBG {
+  background-image: url('student_page_BG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 600px; 
+  width: 100%;
+  display: block;
+}
+
+body.light-mode .homePageBG {
+  background-image: url('SF_CIty.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+body.light-mode .homePageBG {
+  background-image: url('SF_CIty.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+body.light-mode .studentPageBG {
+  background-image: url('student_page_BG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 600px; 
+  width: 100%;
+  display: block;
+} */
