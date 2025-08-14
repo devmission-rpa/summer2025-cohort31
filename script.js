@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Airtable API
-const Class_URL = "https://api.airtable.com/v0/app17NBIG27MwNyLa/Trainees";
+const Class_URL = 'https://api.airtable.com/v0/app17NBIG27MwNyLa/Trainees?&view=Alphabetical';
 async function fetchTrainees() {
   const getResultElement = document.getElementById("airtable");
   const options = { method: "GET", headers: { Authorization: `Bearer patfzwGyoXnDBp6EM.8d05507446ee0c9c79d7e02a2232ce9edb412a4b7818e4630a90760543b2d650` } };
