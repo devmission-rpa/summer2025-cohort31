@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Class Directory Cohort #31 Summer</title>
-
-    <!--linking to bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
-
-    <!--connect to css-->
-    <link rel="stylesheet" href="./style.css" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Directory Cohort #31 Summer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    
-   <!--more feature with bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-    <!--connect to javascript-->
-    <script src="./script.js"></script>
-
-    <!--Background IMG for Home Page-->
-    <div class ="homePageBG">
-      <!-- <img src="SF_CIty.png" class="BGimage" alt="Home Page Background" width="1700px" height="1050px">  -->
+  <!-- SPLASH PAGE -->
+  <div class="splash-page" id="splash">
+    <div class="splash-overlay"></div>
+    <div class="splash-content text-center">
+      <h1>Welcome to Cohort #31</h1>
+      <p>San Francisco Late Night Vibes</p>
+      <button class="btn btn-primary btn-lg" id="enterBtn">Enter Directory</button>
     </div>
-
-    <!--Background IMG for Home Page-->
-    <div class ="studentPageBG">
-      <!--container with id 'airtable' where JavaScript pushes the Airtable data -->
-    
-    <h1 class="directory-header" >Class Directory</h1>
-    
-        <div class="directory-container">
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="airtable">
-          <div class="col">
-            <div class="card">...</div>
-          </div>
+  </div>
+  <!-- NAVBAR (only visible after splash) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-none" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cohort #31</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#directory">Directory</a>
+          </li>
+          <li class="nav-item">
+            <button id="themeToggle" class="btn btn-outline-light btn-sm ms-2">Light Mode</button>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
+  </nav>
+  <!-- DIRECTORY PAGE -->
+  <div class="directory-page d-none" id="directory">
+    <h1 class="directory-header">Class Directory</h1>
+    <div class="directory-container container">
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="airtable">
+        <!-- Cards populated by JS -->
+      </div>
+    </div>
   </div>
-  </div>
-  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./script.js"></script>
+</body>
 </html>
-
-<!--Do not delete patfzwGyoXnDBp6EM.8d05507446ee0c9c79d7e02a2232ce9edb412a4b7818e4630a90760543b2d650-->
