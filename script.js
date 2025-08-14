@@ -1,4 +1,5 @@
 "use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
   const splash = document.getElementById("splash");
   const directory = document.getElementById("directory");
@@ -6,37 +7,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
+
   // Splash Page Enter Button
   enterBtn.addEventListener("click", () => {
-    splash.classList.add("d-none");
-    directory.classList.remove("d-none");
-    navbar.classList.remove("d-none"); // Show navbar after splash
-    fetchTrainees();
+    splash.style.transition = "opacity 0.8s";
+    splash.style.opacity = 0;
+    setTimeout(() => {
+      splash.style.display = "none";
+      navbar.classList.remove("d-none");
+      directory.classList.remove("d-none");
+      fetchTrainees();
+    }, 800);
   });
+
   // Theme Toggle Button
   themeToggle.addEventListener("click", () => {
     body.classList.toggle("light-mode");
     themeToggle.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
-    
   });
 });
+
 // Airtable API
 const Class_URL = "https://api.airtable.com/v0/app17NBIG27MwNyLa/Trainees";
 async function fetchTrainees() {
   const getResultElement = document.getElementById("airtable");
-  const options = {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer patfzwGyoXnDBp6EM.8d05507446ee0c9c79d7e02a2232ce9edb412a4b7818e4630a90760543b2d650`,
-    },
-  };
+  const options = { method: "GET", headers: { Authorization: `Bearer patfzwGyoXnDBp6EM.8d05507446ee0c9c79d7e02a2232ce9edb412a4b7818e4630a90760543b2d650` } };
   try {
     const response = await fetch(Class_URL, options);
     const data = await response.json();
-    console.log(data.records); // debug
     getResultElement.innerHTML = "";
     let newHtml = "";
-    data.records.forEach((record) => {
+    data.records.forEach(record => {
       const fields = record.fields;
       const picture = fields.Photo ? fields.Photo[0].url : "";
       const name = fields.Name || "";
@@ -54,12 +55,10 @@ async function fetchTrainees() {
               <img src="${picture}" class="card-img-top" alt="${name}'s photo">
             </div>
             <div class="card-body">
-              <h5 class="card-title text-center">${name}
-                ${linkedIn ? `<a href="${linkedIn}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}
-              </h5>
+              <h5 class="card-title text-center">${name} ${linkedIn ? `<a href="${linkedIn}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ''}</h5>
               <div class="d-flex justify-content-center gap-3 mb-2">
-                ${aboutMe ? `<a href="${aboutMe}" target="_blank" class="text-decoration-none btn btn-outline-light btn-sm">About Me</a>` : ''}
-                ${webApp ? `<a href="${webApp}" target="_blank" class="text-decoration-none btn btn-outline-light btn-sm">Web App</a>` : ''}
+                ${aboutMe ? `<a href="${aboutMe}" target="_blank" class="btn btn-outline-light btn-sm">About Me</a>` : ''}
+                ${webApp ? `<a href="${webApp}" target="_blank" class="btn btn-outline-light btn-sm">Web App</a>` : ''}
               </div>
               <p class="card-text">${biography}</p>
               <p class="card-text">MBTI: ${personality}</p>
@@ -67,8 +66,7 @@ async function fetchTrainees() {
               <p class="card-text">Favorite order: ${order}</p>
             </div>
           </div>
-        </div>
-      `;
+        </div>`;
     });
     getResultElement.innerHTML = newHtml;
   } catch (error) {
