@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Theme Toggle Button
   themeToggle.addEventListener("click", () => {
-    body.classList.toggle("light-mode");
-    themeToggle.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
-   console.log(body.className); 
+  const isLight = body.classList.toggle("light-mode");
+  body.classList.toggle("dark-mode", !isLight);
+  themeToggle.textContent = isLight ? "Dark Mode" : "Light Mode";
   });
 });
 

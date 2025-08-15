@@ -109,10 +109,9 @@ body.dark-mode .homePageBG {
   background-image: url('SF_CIty_Night.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
-  min-height: 400px; /* adjust as needed */
-  width: 100vw;
-  z-index: 1000;
+  background-position: center;
+  min-height: 100vh;        /* match light-mode’s full-viewport height */
+  width: 100%;
 }
 
 /* 
